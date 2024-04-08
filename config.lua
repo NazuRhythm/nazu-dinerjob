@@ -7,6 +7,8 @@ Config.Language = 'en'
 
 Config.Inventory = 'qb'
 
+Config.Jobs = { 'blackdoctor', }
+
 Config.TargetAction = {
     ['Treys'] = {
         {
