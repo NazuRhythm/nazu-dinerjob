@@ -3,6 +3,8 @@ games {"gta5"}
 
 author 'Nazu'
 version '1.0.0'
+lua54 'yes'
+
 
 ------
 -- SHARED
@@ -10,6 +12,7 @@ version '1.0.0'
 shared_script {
     'config.lua',
     'shared/**/*.lua',
+    '@ox_lib/init.lua',
 }
 
 ------
