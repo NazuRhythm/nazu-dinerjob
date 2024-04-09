@@ -1,6 +1,11 @@
 -- Actions
-RegisterNetEvent('nazu-dinerjob:client:UseGrill', function(key, data)
+RegisterNetEvent('nazu-dinerjob:client:UseCuttingBoard', function(key, data)
     print(data.name)
+end)
+
+RegisterNetEvent('nazu-dinerjob:client:UseGrille', function(key, data)
+    print(data.name)
+    lib.showContext('nazu_grille')
 end)
 
 RegisterNetEvent('nazu-dinerjob:client:UseDrinks', function(key, data)
@@ -10,6 +15,7 @@ end)
 
 RegisterNetEvent('nazu-dinerjob:client:UseCoffeeMaker', function(key, data)
     print(data.name)
+    lib.showContext('nazu_coffee_maker')
 end)
 
 -- Stashes

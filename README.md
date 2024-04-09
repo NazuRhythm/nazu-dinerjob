@@ -1,6 +1,25 @@
 # nazu-dinerjob
 ![image](https://github.com/NazuRhythm/nazu-dinerjob/assets/94416199/cc7bb2f9-776b-4ea1-bdde-beb2744ec6ff)
 
+## Installations
+
+add this on your qb-core/shared/job.lua
+```lua
+diner = {
+	label = 'Diner chef',
+	defaultDuty = true,
+	offDutyPay = false,
+	grades = {
+		['0'] = { name = 'Recruit', payment = 50 },
+		['1'] = { name = 'Manager', payment = 75 },
+		['2'] = { name = 'Boss', payment = 100 },
+	},
+},
+```
+
+
+
+
 ## ALl Box Zones 
 ![image](https://github.com/NazuRhythm/nazu-dinerjob/assets/94416199/55b7a295-e1f2-494f-9c10-3bc76534d97c)
 ![image](https://github.com/NazuRhythm/nazu-dinerjob/assets/94416199/cbd9c91c-ff04-4775-b2a6-dcfb36698640)

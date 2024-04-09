@@ -9,7 +9,7 @@ Citizen.CreateThread(function()
                         TriggerEvent("nazu-dinerjob:client:Use" .. k, k, t)
                     end,
                     icon = 'fas fa-utensils',
-                    label = "トレイ",
+                    label = t.label,
                 }
             elseif k == "Stash" then
                 options = {
@@ -18,7 +18,7 @@ Citizen.CreateThread(function()
                         TriggerEvent("nazu-dinerjob:client:Use" .. k, k, t)
                     end,
                     icon = 'fas fa-box',
-                    label = "倉庫",
+                    label = t.label,
                     job = Config.Jobs.DinerJob
                 }
             elseif k == "Tables" then
@@ -28,7 +28,7 @@ Citizen.CreateThread(function()
                         TriggerEvent("nazu-dinerjob:client:Use" .. k, k, t)
                     end,
                     icon = 'fas fa-utensils',
-                    label = "テーブル",
+                    label = t.label,
                 }
             elseif k == "Refrige" then
                 options = {
@@ -37,17 +37,27 @@ Citizen.CreateThread(function()
                         TriggerEvent("nazu-dinerjob:client:Use" .. k, k, t)
                     end,
                     icon = 'fas fa-otter',
-                    label = "冷蔵庫",
+                    label = t.label,
                     job = Config.Jobs.DinerJob
                 }
-            elseif k == "Grill" then
+            elseif k == "Grille" then
                 options = {
                     type = 'client',
                     action = function()
                         TriggerEvent("nazu-dinerjob:client:Use" .. k, k, t)
                     end,
                     icon = 'fas fa-fire-burner',
-                    label = "グリル",
+                    label = t.label,
+                    job = Config.Jobs.DinerJob
+                }
+            elseif k == "CuttingBoard" then
+                options = {
+                    type = 'client',
+                    action = function()
+                        TriggerEvent("nazu-dinerjob:client:Use" .. k, k, t)
+                    end,
+                    icon = 'fas fa-kitchen-set',
+                    label = t.label,
                     job = Config.Jobs.DinerJob
                 }
             elseif k == "Drinks" then
@@ -57,7 +67,7 @@ Citizen.CreateThread(function()
                         TriggerEvent("nazu-dinerjob:client:Use" .. k, k, t)
                     end,
                     icon = 'fas fa-wine-glass',
-                    label = "ドリンクバー",
+                    label = t.label,
                     job = Config.Jobs.DinerJob
                 }
             elseif k == "CoffeeMaker" then
@@ -67,7 +77,7 @@ Citizen.CreateThread(function()
                         TriggerEvent("nazu-dinerjob:client:Use" .. k, k, t)
                     end,
                     icon = 'fas fa-mug-saucer',
-                    label = "コーヒーメーカー",
+                    label = t.label,
                     job = Config.Jobs.DinerJob
                 }
             end
