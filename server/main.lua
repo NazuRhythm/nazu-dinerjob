@@ -7,12 +7,22 @@ RegisterNetEvent(resName..':server:ChargePlayer', function (cost, type, newsrc)
     end
 end)
 
-RegisterNetEvent(resName..':server:GiveItem', function (item, cost, newsrc)
-    local src = newsrc or source
-    
+RegisterNetEvent(resName..':server:GiveItem', function (item, amount, newsrc)
+    local src = source
+    local xplayer = QBCore.Functions.GetPlayer(src)
+    if xplayer then
+        xplayer.Functions.AddItem(item, amount)
+        TriggerClientEvent(Config.BaseInv..':client:ItemBox', src, QBCore.Shared.Items[item], "add", amount or 1)
+    end
 end)
 
-RegisterNetEvent(resName..':server:RemoveItem', function (item, cost, newsrc)
-    local src = newsrc or source
-    
+RegisterNetEvent(resName..':server:RemoveItem', function (items, newsrc)
+    local src = source
+    local xplayer = QBCore.Functions.GetPlayer(src)
+    if xplayer then
+        for k, v in pairs(items) do
+            xplayer.Functions.RemoveItem(k, v or 1)
+            TriggerClientEvent(Config.BaseInv..':client:ItemBox', src, QBCore.Shared.Items[k], "remove", v or 1)
+        end
+    end
 end)

@@ -1,4 +1,4 @@
-## items.lua
+<!-- ## items.lua
 ```lua
 -- 
 ['nz_pancake'] = {["name"] = "nz_pancake", 					["label"] = "pancake", 				["weight"] = 500, 		["type"] = "item", 			["image"] = "nz_pancake.png", 		["unique"] = false, 	["useable"] = true, 	["shouldClose"] = true,    ["combinable"] = nil,   ["description"] = ""},
@@ -22,4 +22,4 @@
 ['nz_cucumber'] = {["name"] = "nz_cucumber", 					["label"] = "Cucumber", 				["weight"] = 500, 		["type"] = "item", 			["image"] = "nz_cucumber.png", 		["unique"] = false, 	["useable"] = true, 	["shouldClose"] = true,    ["combinable"] = nil,   ["description"] = ""},
 ['nz_strawberry'] = {["name"] = "nz_strawberry", 					["label"] = "Strawberry", 				["weight"] = 500, 		["type"] = "item", 			["image"] = "nz_strawberry.png", 		["unique"] = false, 	["useable"] = true, 	["shouldClose"] = true,    ["combinable"] = nil,   ["description"] = ""},
 ['nz_raw_bacon'] = {["name"] = "nz_raw_bacon", 					["label"] = "Raw Bacon", 				["weight"] = 500, 		["type"] = "item", 			["image"] = "nz_raw_bacon.png", 		["unique"] = false, 	["useable"] = true, 	["shouldClose"] = true,    ["combinable"] = nil,   ["description"] = ""},
-```
+``` -->

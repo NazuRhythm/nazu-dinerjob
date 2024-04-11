@@ -42,6 +42,7 @@ Config.Foods = {
             description = false,
             consumables = math.random(25, 34),
             price = 950,
+            amount = 1,
             recipes = {
                 ['nz_egg'] = 2,
                 ['nz_milk'] = 1,
@@ -53,6 +54,7 @@ Config.Foods = {
             description = false,
             consumables = math.random(25, 34),
             price = 1200,
+            amount = 1,
             recipes = {
                 ['nz_egg'] = 2,
                 ['nz_milk'] = 1,
@@ -63,6 +65,7 @@ Config.Foods = {
             description = false,
             consumables = math.random(25, 34),
             price = 1500,
+            amount = 1,
             recipes = {
                 ['nz_egg'] = 2,
                 ['nz_milk'] = 1,
@@ -74,6 +77,7 @@ Config.Foods = {
             description = false,
             consumables = math.random(25, 34),
             price = 1200,
+            amount = 1,
             recipes = {
                 ['nz_bread'] = 1,
                 ['nz_butter'] = 3,
@@ -84,6 +88,7 @@ Config.Foods = {
             description = false,
             consumables = math.random(25, 34),
             price = 1100,
+            amount = 1,
             recipes = {
                 ['nz_egg'] = 2,
                 ['nz_bread'] = 1,
@@ -95,6 +100,7 @@ Config.Foods = {
             description = false,
             consumables = math.random(25, 34),
             price = 1250,
+            amount = 1,
             recipes = {
                 ['nz_egg'] = 2,
                 ['nz_bread'] = 1,
@@ -105,6 +111,7 @@ Config.Foods = {
             description = false,
             consumables = math.random(25, 34),
             price = 1150,
+            amount = 1,
             recipes = {
                 ['nz_bread'] = 1,
                 ['nz_tomato'] = 1,
@@ -118,6 +125,7 @@ Config.Foods = {
             description = false,
             consumables = math.random(25, 34),
             price = 670,
+            amount = 2,
             recipes = {
                 ['nz_egg'] = 1,
                 ['nz_tomato'] = 1,
@@ -134,12 +142,14 @@ Config.Foods = {
             description = false,
             consumables = math.random(25, 34),
             price = 150,
+            amount = 1,
             recipes = {},
         },
         ['water_bottle'] = {
             description = false,
             consumables = math.random(25, 34),
             price = 150,
+            amount = 1,
             recipes = {}, -- {} or table.
         },
     },
@@ -345,3 +355,13 @@ Config.StashInfo = {
         slots = 56,
     },
 }
+
+
+
+
+
+
+---------------------
+-- DO NOT TOUCH THIS
+--------------
+Config.BaseInv = 'inventory'

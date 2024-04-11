@@ -21,24 +21,18 @@ end)
 
 lib.callback.register(resName..':server:PlayerHasItem', function(source, items)
     local src = source
-    local Player = QBCore.Functions.GetPlayer(src)
+    local xplayer = QBCore.Functions.GetPlayer(src)
     local result = false
     local hasAmount = nil
 
     for item, needAmount in pairs(items) do
-        -- print(item, amount)
-        -- print("has " .. item, Player.Functions.GetItemByName(item).amount)
-        hasAmount = Player.Functions.GetItemByName(item).amount
-        if hasAmount ~= nil then
-            print(hasAmount)
-            if hasAmount <= needAmount then
+        if xplayer.Functions.GetItemByName(tostring(item)) ~= nil then
+            if xplayer.Functions.GetItemByName(item).amount < tonumber(items[item]) then
                 return false
-            else
-                result = true
             end
+        else
+            return false
         end
-        
-        -- print(item, amount, result)
     end
 
     return true
