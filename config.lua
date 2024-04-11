@@ -40,7 +40,6 @@ Config.Foods = {
     Grille = {
         ['nz_pancake'] = {
             description = false,
-            consumables = math.random(25, 34),
             price = 950,
             amount = 1,
             recipes = {
@@ -52,7 +51,6 @@ Config.Foods = {
         },
         ['nz_waffle'] = {
             description = false,
-            consumables = math.random(25, 34),
             price = 1200,
             amount = 1,
             recipes = {
@@ -63,7 +61,6 @@ Config.Foods = {
         },
         ['nz_wafflebacon'] = {
             description = false,
-            consumables = math.random(25, 34),
             price = 1500,
             amount = 1,
             recipes = {
@@ -75,7 +72,6 @@ Config.Foods = {
         },
         ['nz_toast'] = {
             description = false,
-            consumables = math.random(25, 34),
             price = 1200,
             amount = 1,
             recipes = {
@@ -86,7 +82,6 @@ Config.Foods = {
         },
         ['nz_sandwitch'] = {
             description = false,
-            consumables = math.random(25, 34),
             price = 1100,
             amount = 1,
             recipes = {
@@ -98,7 +93,6 @@ Config.Foods = {
         },
         ['nz_brakefastset'] = {
             description = false,
-            consumables = math.random(25, 34),
             price = 1250,
             amount = 1,
             recipes = {
@@ -109,7 +103,6 @@ Config.Foods = {
         },
         ['nz_burger'] = {
             description = false,
-            consumables = math.random(25, 34),
             price = 1150,
             amount = 1,
             recipes = {
@@ -123,7 +116,6 @@ Config.Foods = {
     Cutting = {
         ['nz_salad'] = {
             description = false,
-            consumables = math.random(25, 34),
             price = 670,
             amount = 2,
             recipes = {
@@ -140,14 +132,12 @@ Config.Foods = {
     Drink = {
         ['wine'] = {
             description = false,
-            consumables = math.random(25, 34),
             price = 150,
             amount = 1,
             recipes = {},
         },
         ['water_bottle'] = {
             description = false,
-            consumables = math.random(25, 34),
             price = 150,
             amount = 1,
             recipes = {}, -- {} or table.
@@ -158,7 +148,6 @@ Config.Foods = {
     Coffee = {
         ['coffee'] = {
             description = false,
-            consumables = math.random(25, 34),
             price = 150,
             recipes = {},
         },
