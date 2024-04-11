@@ -1,8 +1,8 @@
 Citizen.CreateThread(function()
-    CreateDrinkBarMenu()
     CreateGrillMenu()
-    CreateCuttingMenu()
     CreateCoffeeMenu()
+    CreateCuttingMenu()
+    CreateDrinkBarMenu()
 end)
 
 function CreateDrinkBarMenu()
@@ -15,7 +15,7 @@ function CreateDrinkBarMenu()
             description = v.description and v.description or GetRecipe(Config.Foods.Drink[k]),
             icon = "nui://" .. Config.ImagePath .. QBCore.Shared.Items[k].image,
             onSelect = function()
-                TakeDrinks(k)
+                TakeDrinks(k, v)
             end
         }
     end
@@ -38,7 +38,7 @@ function CreateGrillMenu()
             description = v.description and v.description or GetRecipe(Config.Foods.Grille[k]),
             icon = "nui://" .. Config.ImagePath .. QBCore.Shared.Items[k].image,
             onSelect = function()
-                Grilling(k)
+                Grilling(k, v)
             end
         }
     end
@@ -58,10 +58,10 @@ function CreateCuttingMenu()
     for k, v in pairs(Config.Foods.Cutting) do
         Options[#Options+1] = {
             title = GetTheTitle(k, v.price),
-            description = v.description and v.description or GetRecipe(Config.Foods.Grille[k]),
+            description = v.description and v.description or GetRecipe(Config.Foods.Cutting[k]),
             icon = "nui://" .. Config.ImagePath .. QBCore.Shared.Items[k].image,
             onSelect = function()
-                Cutting(k)
+                Cutting(k, v)
             end
         }
     end
@@ -84,7 +84,7 @@ function CreateCoffeeMenu()
             description = v.description and v.description or GetRecipe(Config.Foods.Coffee[k]),
             icon = "nui://" .. Config.ImagePath .. QBCore.Shared.Items[k].image,
             onSelect = function()
-                MakeCoffee(k)
+                MakeCoffee(k, v)
             end
         }
     end

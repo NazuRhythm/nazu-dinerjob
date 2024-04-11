@@ -12,8 +12,6 @@ function GetRecipe(data)
         else
             result = "No Recipe"
         end
-    else
-        print("nodata on data.")
     end
 
     return result
