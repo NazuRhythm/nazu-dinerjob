@@ -1,3 +1,4 @@
+
 -- Actions
 RegisterNetEvent('nazu-dinerjob:client:UseCuttingBoard', function(key, data)
     print(data.name)

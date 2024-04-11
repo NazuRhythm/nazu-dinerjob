@@ -34,6 +34,17 @@ Config.Display_Currency = '$'
 Config.Display_Price = true
 Config.Display_x1 = false
 
+Config.ConsumablesEat = {
+    ['nz_pancake'] = math.random(25, 34),
+    ['nz_waffle'] = math.random(25, 34),
+    ['nz_wafflebacon'] = math.random(25, 34),
+    ['nz_toast'] = math.random(25, 34),
+    ['nz_sandwitch'] = math.random(25, 34),
+    ['nz_brakefastset'] = math.random(25, 34),
+    ['nz_burger'] = math.random(25, 34),
+    ['nz_salad'] = math.random(25, 34),
+}
+
 Config.Foods = {
 
     -- Grille
@@ -130,6 +141,12 @@ Config.Foods = {
 
     -- Drink
     Drink = {
+        ['kurkakola'] = {
+            description = false,
+            price = 200,
+            amount = 1,
+            recipes = {},
+        },
         ['wine'] = {
             description = false,
             price = 150,
