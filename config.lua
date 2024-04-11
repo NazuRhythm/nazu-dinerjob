@@ -27,80 +27,124 @@ Config.Blips = {
 
 Config.ImagePath = 'qb-inventory/html/images/'
 
+Config.Display_Currency = '$'
+Config.Display_Price = true
+Config.Display_x1 = false
+
 Config.Foods = {
 
     -- Grille
     Grille = {
-        ['hunting_coyote_meat_cooked'] = {
-            description = '',
+        ['nz_pancake'] = {
+            description = false,
             consumables = math.random(25, 34),
             price = 150,
-            recipes = {},
+            recipes = {
+                ['nz_egg'] = 2,
+                ['nz_milk'] = 1,
+                ['nz_syrup'] = 1,
+                ['nz_pancakemix'] = 1,
+            },
         },
-        ['hunting_crow_meat_cooked'] = {
-            description = '',
+        ['nz_waffle'] = {
+            description = false,
             consumables = math.random(25, 34),
             price = 150,
-            recipes = {},
+            recipes = {
+                ['nz_egg'] = 2,
+                ['nz_milk'] = 1,
+                ['nz_pancakemix'] = 1,
+            },
         },
-        ['hunting_deer_meat_cooked'] = {
-            description = '',
+        ['nz_wafflebacon'] = {
+            description = false,
             consumables = math.random(25, 34),
             price = 150,
-            recipes = {},
+            recipes = {
+                ['nz_egg'] = 2,
+                ['nz_milk'] = 1,
+                ['nz_raw_bacon'] = 1,
+                ['nz_pancakemix'] = 1,
+            },
         },
-        ['hunting_mtlion_meat_cooked'] = {
-            description = '',
+        ['nz_toast'] = {
+            description = false,
             consumables = math.random(25, 34),
             price = 150,
-            recipes = {},
+            recipes = {
+                ['nz_bread'] = 1,
+                ['nz_butter'] = 3,
+                ['nz_strawberry'] = 3,
+            },
         },
-        ['hunting_pigeon_meat_cooked'] = {
-            description = '',
+        ['nz_sandwitch'] = {
+            description = false,
             consumables = math.random(25, 34),
             price = 150,
-            recipes = {},
+            recipes = {
+                ['nz_egg'] = 2,
+                ['nz_bread'] = 1,
+                ['nz_lettuce'] = 1,
+                ['nz_raw_bacon'] = 2,
+            },
         },
-        ['hunting_rabbit_meat_cooked'] = {
-            description = '',
+        ['nz_brakefastset'] = {
+            description = false,
             consumables = math.random(25, 34),
             price = 150,
-            recipes = {},
+            recipes = {
+                ['nz_egg'] = 2,
+                ['nz_bread'] = 1,
+                ['nz_raw_bacon'] = 1,
+            },
         },
-        ['hunting_boar_meat_cooked'] = {
-            description = '',
+        ['nz_burger'] = {
+            description = false,
             consumables = math.random(25, 34),
             price = 150,
-            recipes = {},
+            recipes = {
+                ['nz_bread'] = 1,
+                ['nz_tomato'] = 1,
+                ['nz_lettuce'] = 1,
+            },
         },
-        ['hunting_chickenhawk_meat_cooked'] = {
-            description = '',
+    },
+
+    Cutting = {
+        ['nz_salad'] = {
+            description = false,
             consumables = math.random(25, 34),
             price = 150,
-            recipes = {},
+            recipes = {
+                ['nz_egg'] = 1,
+                ['nz_tomato'] = 1,
+                ['nz_avocado'] = 1,
+                ['nz_lettuce'] = 1,
+                ['nz_cucumber'] = 1,
+            },
         },
     },
 
     -- Drink
     Drink = {
         ['wine'] = {
-            description = '高級赤ワイン。',
+            description = false,
             consumables = math.random(25, 34),
             price = 150,
             recipes = {},
         },
         ['water_bottle'] = {
-            description = 'お水。',
+            description = false,
             consumables = math.random(25, 34),
             price = 150,
-            recipes = {},
+            recipes = {}, -- {} or table.
         },
     },
 
     -- Coffee
     Coffee = {
         ['coffee'] = {
-            description = 'コーヒー',
+            description = false,
             consumables = math.random(25, 34),
             price = 150,
             recipes = {},

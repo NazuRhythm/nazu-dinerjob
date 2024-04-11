@@ -1,6 +1,7 @@
 -- Actions
 RegisterNetEvent('nazu-dinerjob:client:UseCuttingBoard', function(key, data)
     print(data.name)
+    lib.showContext('nazu_cuttingboard')
 end)
 
 RegisterNetEvent('nazu-dinerjob:client:UseGrille', function(key, data)

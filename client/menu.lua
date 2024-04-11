@@ -1,6 +1,7 @@
 Citizen.CreateThread(function()
     CreateDrinkBarMenu()
     CreateGrillMenu()
+    CreateCuttingMenu()
     CreateCoffeeMenu()
 end)
 
@@ -10,8 +11,8 @@ function CreateDrinkBarMenu()
     -- Drink Bar
     for k, v in pairs(Config.Foods.Drink) do
         Options[#Options+1] = {
-            title = QBCore.Shared.Items[k].label,
-            description = v.description,
+            title = GetTheTitle(k, v.price),
+            description = v.description and v.description or GetRecipe(Config.Foods.Drink[k]),
             icon = "nui://" .. Config.ImagePath .. QBCore.Shared.Items[k].image,
             onSelect = function()
                 TakeDrinks(k)
@@ -33,12 +34,11 @@ function CreateGrillMenu()
     -- Grille Menu
     for k, v in pairs(Config.Foods.Grille) do
         Options[#Options+1] = {
-            title = QBCore.Shared.Items[k].label,
-            description = v.description,
+            title = GetTheTitle(k, v.price),
+            description = v.description and v.description or GetRecipe(Config.Foods.Grille[k]),
             icon = "nui://" .. Config.ImagePath .. QBCore.Shared.Items[k].image,
             onSelect = function()
-                -- TakeDrinks(k)
-                print("nui://" .. Config.ImagePath .. QBCore.Shared.Items[k].image)
+                Grilling(k)
             end
         }
     end
@@ -51,14 +51,37 @@ function CreateGrillMenu()
     })
 end
 
+function CreateCuttingMenu()
+    local Options = {}
+    
+    -- Grille Menu
+    for k, v in pairs(Config.Foods.Cutting) do
+        Options[#Options+1] = {
+            title = GetTheTitle(k, v.price),
+            description = v.description and v.description or GetRecipe(Config.Foods.Grille[k]),
+            icon = "nui://" .. Config.ImagePath .. QBCore.Shared.Items[k].image,
+            onSelect = function()
+                Cutting(k)
+            end
+        }
+    end
+    
+    -- Grille Menu
+    lib.registerContext({
+        id = 'nazu_cuttingboard',
+        title = 'まな板',
+        options = Options,
+    })
+end
+
 function CreateCoffeeMenu()
     local Options = {}
     
     -- Coffee Menu
     for k, v in pairs(Config.Foods.Coffee) do
         Options[#Options+1] = {
-            title = QBCore.Shared.Items[k].label,
-            description = v.description,
+            title = GetTheTitle(k, v.price),
+            description = v.description and v.description or GetRecipe(Config.Foods.Coffee[k]),
             icon = "nui://" .. Config.ImagePath .. QBCore.Shared.Items[k].image,
             onSelect = function()
                 MakeCoffee(k)
