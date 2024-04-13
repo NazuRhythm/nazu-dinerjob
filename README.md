@@ -69,7 +69,7 @@ diner = {
 },
 ['nz_sandwitch'] = {
     ["name"] = "nz_sandwitch",
-    ["label"] = "waffle and bacon",
+    ["label"] = "Sandwich",
     ["weight"] = 500,
     ["type"] = "item",
     ["image"] = "nz_sandwitch.png",
