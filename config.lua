@@ -1,7 +1,7 @@
 Config = Config or {}
 Loc = {}
 
-Config.DebugMode = true
+Config.DebugMode = false
 
 Config.Language = 'en'
 
