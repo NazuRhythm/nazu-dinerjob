@@ -1,5 +1,6 @@
 # nazu-dinerjob
-![image](https://github.com/NazuRhythm/nazu-dinerjob/assets/94416199/cc7bb2f9-776b-4ea1-bdde-beb2744ec6ff)
+![Screenshot 2024-04-13 142414](https://github.com/NazuRhythm/nazu-dinerjob/assets/94416199/e0ef6738-a47c-41dd-b7ac-089bf564481b)
+
 
 ## Installations
 
