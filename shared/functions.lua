@@ -1,6 +1,3 @@
-QBCore = exports['qb-core']:GetCoreObject()
-resName = GetCurrentResourceName()
-
 function triggerNotify(title, message, type, src)
 	if Config.Notify == "okok" then
 		if not src then exports['okokNotify']:Alert(title, message, 6000, type, true)

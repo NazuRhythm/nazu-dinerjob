@@ -1,32 +1,11 @@
+Loc = Loc[Config.Language]
+
 Citizen.CreateThread(function()
     CreateGrillMenu()
-    CreateCoffeeMenu()
     CreateCuttingMenu()
-    CreateDrinkBarMenu()
+    CreateDrinkBarMenu()                        
+    CreateCoffeeMenu()
 end)
-
-function CreateDrinkBarMenu()
-    local Options = {}
-    
-    -- Drink Bar
-    for k, v in pairs(Config.Foods.Drink) do
-        Options[#Options+1] = {
-            title = GetTheTitle(k, v.price),
-            description = v.description and v.description or GetRecipe(Config.Foods.Drink[k]),
-            icon = "nui://" .. Config.ImagePath .. QBCore.Shared.Items[k].image,
-            onSelect = function()
-                TakeDrinks(k, v)
-            end
-        }
-    end
-    
-    -- Drink Bar
-    lib.registerContext({
-        id = 'nazu_drink_bar',
-        title = 'ドリンクバー',
-        options = Options,
-    })
-end
 
 function CreateGrillMenu()
     local Options = {}
@@ -46,7 +25,7 @@ function CreateGrillMenu()
     -- Grille Menu
     lib.registerContext({
         id = 'nazu_grille',
-        title = 'グリル焼き',
+        title = Loc.Menu.grille,
         options = Options,
     })
 end
@@ -54,7 +33,7 @@ end
 function CreateCuttingMenu()
     local Options = {}
     
-    -- Grille Menu
+    -- Cutting Menu
     for k, v in pairs(Config.Foods.Cutting) do
         Options[#Options+1] = {
             title = GetTheTitle(k, v.price),
@@ -66,10 +45,33 @@ function CreateCuttingMenu()
         }
     end
     
-    -- Grille Menu
+    -- Cutting Menu
     lib.registerContext({
         id = 'nazu_cuttingboard',
-        title = 'まな板',
+        title = Loc.Menu.cutting_board,
+        options = Options,
+    })
+end
+
+function CreateDrinkBarMenu()
+    local Options = {}
+    
+    -- Drink Bar
+    for k, v in pairs(Config.Foods.Drink) do
+        Options[#Options+1] = {
+            title = GetTheTitle(k, v.price),
+            description = v.description and v.description or GetRecipe(Config.Foods.Drink[k]),
+            icon = "nui://" .. Config.ImagePath .. QBCore.Shared.Items[k].image,
+            onSelect = function()
+                TakeDrinks(k, v)
+            end
+        }
+    end
+    
+    -- Drink Bar
+    lib.registerContext({
+        id = 'nazu_drink_bar',
+        title = Loc.Menu.drink_bar,
         options = Options,
     })
 end
@@ -92,7 +94,7 @@ function CreateCoffeeMenu()
     -- Coffee Menu
     lib.registerContext({
         id = 'nazu_coffee_maker',
-        title = 'コーヒーメーカー',
+        title = Loc.Menu.coffee_maker,
         options = Options,
     })
 end

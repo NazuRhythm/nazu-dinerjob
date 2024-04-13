@@ -1,19 +1,23 @@
 Config = Config or {}
-Locales = Locales or {}
+Loc = {}
 
 Config.DebugMode = true
 
 Config.Language = 'en'
 
-Config.Inventory = 'qb'
+Config.ImagePath = 'qb-inventory/html/images/'
+
+Config.Notify = 'okok'
+
+Config.ChargeType = "cash"
+Config.Display_Currency = '$'
+Config.Display_Price = true
+Config.Display_x1 = false
 
 Config.Jobs = { 
     DinerJob = {
         ['diner'] = 0,
     },
-    -- PoliceJob = {
-    --     ['police'] = 0,
-    -- }
 }
 
 Config.Blips = {
@@ -25,25 +29,6 @@ Config.Blips = {
     },
 }
 
-Config.ImagePath = 'qb-inventory/html/images/'
-
-Config.Notify = 'okok'
-
-Config.ChargeType = "cash"
-Config.Display_Currency = '$'
-Config.Display_Price = true
-Config.Display_x1 = false
-
-Config.ConsumablesEat = {
-    ['nz_pancake'] = math.random(25, 34),
-    ['nz_waffle'] = math.random(25, 34),
-    ['nz_wafflebacon'] = math.random(25, 34),
-    ['nz_toast'] = math.random(25, 34),
-    ['nz_sandwitch'] = math.random(25, 34),
-    ['nz_brakefastset'] = math.random(25, 34),
-    ['nz_burger'] = math.random(25, 34),
-    ['nz_salad'] = math.random(25, 34),
-}
 
 Config.Foods = {
 
@@ -128,7 +113,7 @@ Config.Foods = {
         ['nz_salad'] = {
             description = false,
             price = 670,
-            amount = 2,
+            amount = 1,
             recipes = {
                 ['nz_egg'] = 1,
                 ['nz_tomato'] = 1,
@@ -175,7 +160,7 @@ Config.Diners = {
     ['Treys'] = {
         {
             name = 'nazu_dinerjob_trey1',
-            label = 'トレイ１',
+            label = 'Trey１',
             coords = vector3(1593.61, 6453.82, 26.01), d = 0.4, w = 0.6,
             heading = 336,
             minZ = 26.01,
@@ -183,7 +168,7 @@ Config.Diners = {
         },
         {
             name = 'nazu_dinerjob_trey2',
-            label = 'トレイ２',
+            label = 'Trey２',
             coords = vector3(1590.37, 6455.29, 26.01), d = 0.4, w = 0.6,
             heading = 336,
             minZ = 26.01,
@@ -191,7 +176,7 @@ Config.Diners = {
         },
         {
             name = 'nazu_dinerjob_trey3',
-            label = 'トレイ３',
+            label = 'Trey３',
             coords = vector3(1586.68, 6457.07, 26.01), d = 0.4, w = 0.6,
             heading = 332,
             minZ = 26.01,
@@ -199,7 +184,7 @@ Config.Diners = {
         },
         {
             name = 'nazu_dinerjob_trey4',
-            label = 'トレイ４',
+            label = 'Trey４',
             coords = vector3(1584.79, 6458.46, 26.01), d = 0.4, w = 0.6,
             heading = 306,
             minZ = 26.01,
@@ -209,7 +194,7 @@ Config.Diners = {
     ['Tables'] = {
         {
             name = 'nazu_dinerjob_table1',
-            label = 'テーブル１',
+            label = 'Table１',
             coords = vector3(1592.77, 6450.77, 26.01), d = 1.4, w = 0.8,
             heading = 336,
             minZ = 25.75,
@@ -217,7 +202,7 @@ Config.Diners = {
         },
         {
             name = 'nazu_dinerjob_table2',
-            label = 'テーブル２',
+            label = 'Table２',
             coords = vector3(1590.98, 6451.58, 26.01), d = 1.4, w = 0.8,
             heading = 335,
             minZ = 25.75,
@@ -225,7 +210,7 @@ Config.Diners = {
         },
         {
             name = 'nazu_dinerjob_table3',
-            label = 'テーブル３',
+            label = 'Table３',
             coords = vector3(1589.14, 6452.44, 26.01), d = 1.4, w = 0.8,
             heading = 335,
             minZ = 25.75,
@@ -233,7 +218,7 @@ Config.Diners = {
         },
         {
             name = 'nazu_dinerjob_table4',
-            label = 'テーブル４',
+            label = 'Table４',
             coords = vector3(1587.34, 6453.29, 26.01), d = 1.4, w = 0.8,
             heading = 334,
             minZ = 25.75,
@@ -241,7 +226,7 @@ Config.Diners = {
         },
         {
             name = 'nazu_dinerjob_table5',
-            label = 'テーブル５',
+            label = 'Table５',
             coords = vector3(1585.52, 6454.1, 26.01), d = 1.4, w = 0.8,
             heading = 336,
             minZ = 25.75,
@@ -249,7 +234,7 @@ Config.Diners = {
         },
         {
             name = 'nazu_dinerjob_table6',
-            label = 'テーブル６',
+            label = 'Table６',
             coords = vector3(1583.71, 6454.98, 26.01), d = 1.4, w = 0.8,
             heading = 334,
             minZ = 25.75,
@@ -257,7 +242,7 @@ Config.Diners = {
         },
         {
             name = 'nazu_dinerjob_table7',
-            label = 'テーブル７',
+            label = 'Table７',
             coords = vector3(1581.89, 6455.85, 26.01), d = 1.4, w = 0.8,
             heading = 334,
             minZ = 25.75,
@@ -267,7 +252,7 @@ Config.Diners = {
     ['CuttingBoard'] = {
         {
             name = 'nazu_dinerjob_cuttingboard1',
-            label = 'まな板',
+            label = 'Cutting Board',
             coords = vector3(1586.92, 6459.28, 26.01), d = 0.7, w = 0.5,
             heading = 65,
             minZ = 26.01,
@@ -277,7 +262,7 @@ Config.Diners = {
     ['Grille'] = {
         {
             name = 'nazu_dinerjob_grille1',
-            label = 'グリル',
+            label = 'Grille',
             coords = vector3(1587.96, 6459.01, 26.01), d = 1.4, w = 0.6,
             heading = 65,
             minZ = 26.01,
@@ -287,7 +272,7 @@ Config.Diners = {
     ['Drinks'] = {
         {
             name = 'nazu_dinerjob_drinks1',
-            label = 'ドリンクバー',
+            label = 'Drink Bar',
             coords = vector3(1586.16, 6459.9, 26.01), d = 1.1, w = 1.1,
             heading = 65,
             minZ = 26.01,
@@ -295,7 +280,7 @@ Config.Diners = {
         },
         {
             name = 'nazu_dinerjob_drinks2',
-            label = 'ドリンクバー',
+            label = 'Drink Bar',
             coords = vector3(1594.19, 6456.03, 26.01), d = 0.6, w = 0.6,
             heading = 336,
             minZ = 26.01,
@@ -305,7 +290,7 @@ Config.Diners = {
     ['CoffeeMaker'] = {
         {
             name = 'nazu_dinerjob_coffeemaker1',
-            label = 'コーヒーメーカー',
+            label = 'Coffee Maker',
             coords = vector3(1592.33, 6456.91, 26.01), d = 2.0, w = 0.6,
             heading = 64,
             minZ = 26.01,
@@ -315,7 +300,7 @@ Config.Diners = {
     ['Refrige'] = {
         {
             name = 'nazu_dinerjob_refrige1',
-            label = '冷蔵庫',
+            label = 'Refrige',
             coords = vector3(1586.03, 6459.63, 26.01), d = 1.7, w = 0.7,
             heading = 65,
             minZ = 23.01,
@@ -325,7 +310,7 @@ Config.Diners = {
     ['Stash'] = {
         {
             name = 'nazu_dinerjob_stash1',
-            label = '棚１',
+            label = 'Stash １',
             coords = vector3(1593.15, 6454.1, 26.01), d = 1.8, w = 0.4,
             heading = 65,
             minZ = 22.01,
@@ -333,7 +318,7 @@ Config.Diners = {
         },
         {
             name = 'nazu_dinerjob_stash2',
-            label = '棚２',
+            label = 'Stash ２',
             coords = vector3(1595.22, 6455.8, 26.01), d = 1.5, w = 0.3,
             heading = 64,
             minZ = 26.01,
