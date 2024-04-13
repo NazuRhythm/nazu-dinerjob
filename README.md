@@ -1,8 +1,9 @@
 # nazu-dinerjob
-![Screenshot 2024-04-13 142414](https://github.com/NazuRhythm/nazu-dinerjob/assets/94416199/e0ef6738-a47c-41dd-b7ac-089bf564481b)
-
+![Screenshot 2024-04-13 142414](https://github.com/NazuRhythm/nazu-dinerjob/assets/94416199/4f87f740-1041-4ad7-89ce-f1250a8a1478)
 
 ## Installations
+
+download this script from latest
 
 add this on your qb-core/shared/job.lua
 ```lua
@@ -285,3 +286,9 @@ ensure nazu-dinerjob
 ```
 
 ## ALl Box Zones 
+
+![image](https://github.com/NazuRhythm/nazu-dinerjob/assets/94416199/99cf4fe2-e779-4852-88d6-6f02d7f49ae7)
+![image](https://github.com/NazuRhythm/nazu-dinerjob/assets/94416199/1193262f-d81d-43f8-bd44-49fbdb6491a9)
+![image](https://github.com/NazuRhythm/nazu-dinerjob/assets/94416199/b9cc935c-d9e6-4f7d-aa36-be138399e3db)
+
+
