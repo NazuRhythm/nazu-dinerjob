@@ -3,7 +3,8 @@
 
 ## Installations
 
-download this script from latest
+first, download the script from [latest](https://github.com/NazuRhythm/nazu-dinerjob/releases/tag/release)
+and change the folder name to nazu-dinerjob
 
 add this on your qb-core/shared/job.lua
 ```lua
