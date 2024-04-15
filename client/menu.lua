@@ -13,7 +13,7 @@ function CreateGrillMenu()
     -- Grille Menu
     for k, v in pairs(Config.Foods.Grille) do
         Options[#Options+1] = {
-            title = GetTheTitle(k, v.price),
+            title = GetTheTitle(k, v),
             description = v.description and v.description or GetRecipe(Config.Foods.Grille[k]),
             icon = "nui://" .. Config.ImagePath .. QBCore.Shared.Items[k].image,
             onSelect = function()
@@ -36,7 +36,7 @@ function CreateCuttingMenu()
     -- Cutting Menu
     for k, v in pairs(Config.Foods.Cutting) do
         Options[#Options+1] = {
-            title = GetTheTitle(k, v.price),
+            title = GetTheTitle(k, v),
             description = v.description and v.description or GetRecipe(Config.Foods.Cutting[k]),
             icon = "nui://" .. Config.ImagePath .. QBCore.Shared.Items[k].image,
             onSelect = function()
@@ -59,7 +59,7 @@ function CreateDrinkBarMenu()
     -- Drink Bar
     for k, v in pairs(Config.Foods.Drink) do
         Options[#Options+1] = {
-            title = GetTheTitle(k, v.price),
+            title = GetTheTitle(k, v),
             description = v.description and v.description or GetRecipe(Config.Foods.Drink[k]),
             icon = "nui://" .. Config.ImagePath .. QBCore.Shared.Items[k].image,
             onSelect = function()
@@ -82,7 +82,7 @@ function CreateCoffeeMenu()
     -- Coffee Menu
     for k, v in pairs(Config.Foods.Coffee) do
         Options[#Options+1] = {
-            title = GetTheTitle(k, v.price),
+            title = GetTheTitle(k, v),
             description = v.description and v.description or GetRecipe(Config.Foods.Coffee[k]),
             icon = "nui://" .. Config.ImagePath .. QBCore.Shared.Items[k].image,
             onSelect = function()

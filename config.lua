@@ -1,35 +1,52 @@
 Config = Config or {}
 Loc = {}
 
-Config.DebugMode = false
+Config.DebugMode = false -- false or true
 
-Config.Language = 'en'
+Config.Language = 'en' -- 'en' or 'ja'
 
 Config.ImagePath = 'qb-inventory/html/images/'
 
-Config.Notify = 'okok'
+Config.Notify = 'okok' -- 'qb' or 'ox' or 'okok' or another(you need to add notify event on shared/functions.lua).
 
-Config.ChargeType = "cash"
+Config.ChargeType = 'cash' -- 'cash' or 'bank'
 Config.Display_Currency = '$'
-Config.Display_Price = true
-Config.Display_x1 = false
+Config.Display_Price = true 
+Config.Display_x1 = true
 
+---@class Jobs table
+---@field DinerJob table
+---@field jobName string name of job.
 Config.Jobs = { 
     DinerJob = {
         ['diner'] = 0,
+        -- you can add here more
     },
 }
 
+---@class Blips table
+---@field BlipName table Table names become blip names
+---@field coords vector3 Blip location
+---@field sprite number Blip sprite id
+---@field color number Blip color id
+---@field scale number Blip scale
 Config.Blips = {
-    ['Diner`s Restaurant'] = {
+    ['Diner`s Restaurant'] = { --
         coords = vector3(1588.19, 6454.99, 26.01),
         sprite = 206,
         color = 0,
         scale = 0.6,
     },
+    -- you can add here more
 }
 
 
+---@class Foods table
+---@field ActoionName table
+---@field description boolean | string If you want to false recipe set false.
+---@field price number What it costs when you make it
+---@field amount number How many food you can male at one time 
+---@field recipes table | string If you set {} they dont need item to make it
 Config.Foods = {
 
     -- Grille
@@ -38,7 +55,7 @@ Config.Foods = {
             description = false,
             price = 950,
             amount = 1,
-            recipes = {
+            recipes = { -- {} or table
                 ['nz_egg'] = 2,
                 ['nz_milk'] = 1,
                 ['nz_syrup'] = 1,
@@ -49,7 +66,7 @@ Config.Foods = {
             description = false,
             price = 1200,
             amount = 1,
-            recipes = {
+            recipes = { -- {} or table
                 ['nz_egg'] = 2,
                 ['nz_milk'] = 1,
                 ['nz_pancakemix'] = 1,
@@ -59,7 +76,7 @@ Config.Foods = {
             description = false,
             price = 1500,
             amount = 1,
-            recipes = {
+            recipes = { -- {} or table
                 ['nz_egg'] = 2,
                 ['nz_milk'] = 1,
                 ['nz_raw_bacon'] = 1,
@@ -70,7 +87,7 @@ Config.Foods = {
             description = false,
             price = 1200,
             amount = 1,
-            recipes = {
+            recipes = { -- {} or table
                 ['nz_bread'] = 1,
                 ['nz_butter'] = 3,
                 ['nz_strawberry'] = 3,
@@ -80,7 +97,7 @@ Config.Foods = {
             description = false,
             price = 1100,
             amount = 1,
-            recipes = {
+            recipes = { -- {} or table
                 ['nz_egg'] = 2,
                 ['nz_bread'] = 1,
                 ['nz_lettuce'] = 1,
@@ -91,7 +108,7 @@ Config.Foods = {
             description = false,
             price = 1250,
             amount = 1,
-            recipes = {
+            recipes = { -- {} or table
                 ['nz_egg'] = 2,
                 ['nz_bread'] = 1,
                 ['nz_raw_bacon'] = 1,
@@ -101,12 +118,13 @@ Config.Foods = {
             description = false,
             price = 1150,
             amount = 1,
-            recipes = {
+            recipes = { -- {} or table
                 ['nz_bread'] = 1,
                 ['nz_tomato'] = 1,
                 ['nz_lettuce'] = 1,
             },
         },
+        -- you can add here more
     },
 
     Cutting = {
@@ -114,7 +132,7 @@ Config.Foods = {
             description = false,
             price = 670,
             amount = 1,
-            recipes = {
+            recipes = { -- {} or table
                 ['nz_egg'] = 1,
                 ['nz_tomato'] = 1,
                 ['nz_avocado'] = 1,
@@ -130,13 +148,13 @@ Config.Foods = {
             description = false,
             price = 200,
             amount = 1,
-            recipes = {},
+            recipes = {}, -- {} or table
         },
         ['wine'] = {
             description = false,
             price = 150,
             amount = 1,
-            recipes = {},
+            recipes = {}, -- {} or table
         },
         ['water_bottle'] = {
             description = false,
@@ -151,11 +169,21 @@ Config.Foods = {
         ['coffee'] = {
             description = false,
             price = 150,
-            recipes = {},
+            recipes = {}, -- {} or table
         },
     }
 }
 
+---@class Diners table
+---@field KindOfTargetName table
+---@field name string Do not use minus characters.
+---@field label string When you target label.
+---@field coords vector3 location of vector3
+---@field d number depth of BoxZone
+---@field w number width of BoxZone
+---@field heading number heading of BoxZone
+---@field minZ number minZ of BoxZone
+---@field maxZ number maxZ of BoxZone
 Config.Diners = {
     ['Treys'] = {
         {
