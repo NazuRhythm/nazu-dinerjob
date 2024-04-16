@@ -1,6 +1,10 @@
 # nazu-dinerjob
 ![Screenshot 2024-04-13 142414](https://github.com/NazuRhythm/nazu-dinerjob/assets/94416199/4f87f740-1041-4ad7-89ce-f1250a8a1478)
 
+# Requirements
+this mlo is gabz mlo.
+you need to buy gabz mlo if you dont have it.
+
 ## Installations
 
 first, download the script from [latest](https://github.com/NazuRhythm/nazu-dinerjob/releases/tag/release)
