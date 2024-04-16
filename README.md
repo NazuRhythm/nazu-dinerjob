@@ -3,7 +3,7 @@
 
 # Requirements
 this mlo is gabz mlo.
-you need to buy gabz mlo if you dont have it.
+you need to buy [gabz](https://www.gabzv.com/) mlo if you dont have it.
 
 ## Installations
 
