@@ -1,5 +1,7 @@
 <h1 align="center">nazu-dinerjob</h1>
-![Screenshot 2024-04-13 142414](https://github.com/NazuRhythm/nazu-dinerjob/assets/94416199/4f87f740-1041-4ad7-89ce-f1250a8a1478)
+
+![image](https://github.com/NazuRhythm/nazu-dinerjob/assets/94416199/96b8a2b4-2962-482f-8a11-6e79ded0a717)
+
 
 # Requirements
 this mlo is gabz mlo.
