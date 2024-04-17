@@ -10,7 +10,7 @@ you need to buy [gabz](https://www.gabzv.com/) mlo if you dont have it.
 first, download the script from [latest](https://github.com/NazuRhythm/nazu-dinerjob/releases/tag/release)
 and change the folder name to nazu-dinerjob
 
-add this on your qb-core/shared/job.lua
+### 1. add this on your qb-core/shared/job.lua
 ```lua
 diner = {
 	label = 'Diner chef',
@@ -24,7 +24,7 @@ diner = {
 },
 ```
 
-### 1. add this on your qb-core/shared/items.lua
+### 2. add this on your qb-core/shared/items.lua
 ```lua
 ['nz_pancake'] = {
         ["name"] = "nz_pancake",
@@ -268,9 +268,9 @@ diner = {
     ["description"] = ""
 },
 ```
-### 2. drop the image to inventory/html/images
+### 3. drop the image to inventory/html/images
 
-### 3. add this on your qb-smallresourece/config.lua
+### 4. add this on your qb-smallresourece/config.lua
 ```lua
 -- Config.Consumables/eat
     ['nz_pancake'] = math.random(25, 34),
@@ -283,14 +283,14 @@ diner = {
     ['nz_salad'] = math.random(25, 34),
 ```
 
-### 4. add this on your server.cfg
+### 5. add this on your server.cfg
 ```
 ensure ox_lib
 
 ensure nazu-dinerjob
 ```
 
-## ALl Box Zones 
+## All Box Zones 
 
 ![image](https://github.com/NazuRhythm/nazu-dinerjob/assets/94416199/99cf4fe2-e779-4852-88d6-6f02d7f49ae7)
 ![image](https://github.com/NazuRhythm/nazu-dinerjob/assets/94416199/1193262f-d81d-43f8-bd44-49fbdb6491a9)
