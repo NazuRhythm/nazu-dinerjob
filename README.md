@@ -7,6 +7,9 @@
 this mlo is gabz mlo.
 you need to buy [gabz](https://www.gabzv.com/) mlo if you dont have it.
 
+# Demo Video
+[video](https://youtu.be/j6uB1gzEw90?si=UNdViWRvpxJkzmO8)
+
 ## Installations
 
 first, download the script from [latest](https://github.com/NazuRhythm/nazu-dinerjob/releases/tag/release)
